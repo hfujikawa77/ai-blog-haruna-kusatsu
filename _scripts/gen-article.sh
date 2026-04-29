@@ -44,9 +44,9 @@ else
 fi
 
 # --- [3/3] Claude: SNS投稿文生成 ---
-SNS_DIR="$SCRIPT_DIR/../_sns/$DATE"
-if [ -d "$SNS_DIR" ] && [ "$FORCE" = false ]; then
-  echo "--- [3/3] スキップ: SNS投稿文がすでに存在します ($SNS_DIR)"
+SNS_FILE="$SCRIPT_DIR/../_sns/$DATE.md"
+if [ -f "$SNS_FILE" ] && [ "$FORCE" = false ]; then
+  echo "--- [3/3] スキップ: SNS投稿文がすでに存在します ($SNS_FILE)"
 else
   echo "--- [3/3] Claude: SNS投稿文生成 ---"
   SNS_PROMPT=$(sed "s/{{DATE}}/$DATE/g" "$SCRIPT_DIR/../prompts/new-sns.md")

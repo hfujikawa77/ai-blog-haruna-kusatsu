@@ -53,13 +53,10 @@ published: false
 
 
 ### SNS投稿文章のファイル形式
-- `_posts/yyyy-mm-dd-title.md` の内容を元にSNS投稿用文章として、 `_sns/yyyy-mm-dd/` ディレクトリを作成し、その中に各SNSごとのファイルを作成してください。
+- `_posts/yyyy-mm-dd-title.md` の内容を元にSNS投稿用文章として、 `_sns/yyyy-mm-dd.md` ファイルを1つ作成してください。
   ```
   _sns/
-    yyyy-mm-dd/
-      twitter.md
-      facebook.md
-      instagram.md
+    yyyy-mm-dd.md
   ```
 - 1つの投稿にまとめること（スレッド・複数投稿不要）。
 - 記事へのリンクURLと本文末尾にハッシュタグを記述すること。ハッシュタグは上限3つ。
